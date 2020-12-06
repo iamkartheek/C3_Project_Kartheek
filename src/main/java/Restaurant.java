@@ -32,7 +32,13 @@ public class Restaurant {
         //Returns the menu
     }
 
-
+    public int showTotalPrice(List<Item> menu) {
+        int totalPrice = 0;
+        for(Item item: menu) {
+            totalPrice+=item.getPrice();
+        }
+        return totalPrice;
+    }
 
     private Item findItemByName(String itemName){
         for(Item item: menu) {
